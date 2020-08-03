@@ -1,0 +1,23 @@
+from mcpi.minecraft import Minecraft
+import time
+mc=Minecraft.create()
+time.sleep(7)
+
+
+x,y,z=mc.player.setPos
+
+mc.player.setPos(x,y,z)
+time.sleep(0.5)
+y=y+1
+
+mc.player.setPos(x,y,z)
+time.sleep(0.5)
+y=y+1
+
+t=0
+while True:
+    t=t+1
+    mc.postToChat("第"+str(t)+"次")
+'''health=20
+health=health-2
+print(health)'''
